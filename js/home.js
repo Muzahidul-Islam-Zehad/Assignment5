@@ -33,7 +33,7 @@ document.getElementById('noakhali-donate-button').addEventListener('click', func
 
     document.getElementById('donation-amount-noakhali').value = '';
 
-    
+
 
     let div = document.createElement('div');
     let h2 = document.createElement('h2');
@@ -46,7 +46,7 @@ document.getElementById('noakhali-donate-button').addEventListener('click', func
     div.appendChild(p);
 
     h2.style.fontWeight = 'bold';
-    h2.style.marginBottom ='12px';
+    h2.style.marginBottom = '12px';
     div.style.border = '1px solid gray';
     div.style.borderRadius = '16px';
     div.style.padding = '16px';
@@ -103,7 +103,7 @@ document.getElementById('feni-donation-button').addEventListener('click', functi
     div.appendChild(p);
 
     h2.style.fontWeight = 'bold';
-    h2.style.marginBottom ='12px';
+    h2.style.marginBottom = '12px';
     div.style.border = '1px solid gray';
     div.style.borderRadius = '16px';
     div.style.padding = '16px';
@@ -159,7 +159,7 @@ document.getElementById('quota-donation-button').addEventListener('click', funct
     div.appendChild(p);
 
     h2.style.fontWeight = 'bold';
-    h2.style.marginBottom ='12px';
+    h2.style.marginBottom = '12px';
     div.style.border = '1px solid gray';
     div.style.borderRadius = '16px';
     div.style.padding = '16px';
@@ -172,7 +172,15 @@ document.getElementById('quota-donation-button').addEventListener('click', funct
 
 
 // donation button
-document.getElementById('donation').addEventListener('click', function () {
+document.getElementById('donation').addEventListener('click', function(){
+
+    document.getElementById('donation').classList.remove('bg-white','border','border-[#1111114D]');
+    document.getElementById('donation').classList.add('bg-lime-300', 'hover:bg-lime-200',);
+
+
+    document.getElementById('history').classList.remove('border-none', 'bg-lime-300', 'hover:bg-lime-200');
+    document.getElementById('history').classList.add('bg-white');
+
     document.getElementById('donation-history').classList.add('hidden');
     document.getElementById('donation-page').classList.remove('hidden');
 })
@@ -181,6 +189,13 @@ document.getElementById('donation').addEventListener('click', function () {
 
 // history button
 document.getElementById('history').addEventListener('click', function () {
+
+    document.getElementById('donation').classList.remove('bg-lime-300', 'hover:bg-lime-200');
+    document.getElementById('donation').classList.add('bg-white', 'hover:bg-gray-200', 'border', 'border-[#1111114D]');
+
+
+    document.getElementById('history').classList.remove('bg-white');
+    document.getElementById('history').classList.add('border-none', 'bg-lime-300', 'hover:bg-lime-200');
 
     document.getElementById('donation-page').classList.add('hidden');
     document.getElementById('donation-history').classList.remove('hidden');
