@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="lexend-font">
+<body class="lexend-font relative overflow-auto">
     <header class="lg:sticky lg:top-0">
         <section class="backdrop-blur-xl">
             <!-- nav bar start-->
@@ -44,9 +44,9 @@
 
             <!-- donation and history button -->
             <div class="flex justify-center gap-4 py-6 default-width mx-auto">
-                <button class="btn bg-lime-300 hover:bg-lime-200 px-8 text-xl font-semibold border-none">Donation
+                <button id="donation" class="btn bg-lime-300 hover:bg-lime-200 px-8 text-xl font-semibold border-none">Donation
                 </button>
-                <button
+                <button id="history"
                     class="btn bg-white hover:bg-gray-200 border border-[#1111114D] shadow-none px-8 text-xl font-semibold text-[#111111B3] ">History</button>
             </div>
         </section>
@@ -54,7 +54,7 @@
 
     <main>
         <!-- cards container -->
-        <section>
+        <section id="donation-page" class="">
             <div class="default-width mx-auto space-y-4" >
                 <!-- card 1 -->
                 <div class="border border-gray-200 rounded-2xl p-8">
@@ -142,6 +142,10 @@
             </div>
         </section>
 
+        <!-- history container -->
+        <section id="donation-history" class="default-width mx-auto hidden">
+
+        </section>
     </main>
 
     <footer>

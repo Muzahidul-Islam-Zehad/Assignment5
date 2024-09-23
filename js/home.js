@@ -1,7 +1,7 @@
 
 
 // NOAKHALI DONATION SECTION JS
-document.getElementById('noakhali-donate-button').addEventListener('click', function(event){
+document.getElementById('noakhali-donate-button').addEventListener('click', function (event) {
     event.preventDefault();
     let donationAmount = getElementValueById('donation-amount-noakhali');
     let totalDonation = getElementInnerTextById('noakhali-total-donation');
@@ -11,19 +11,17 @@ document.getElementById('noakhali-donate-button').addEventListener('click', func
     totalDonation = parseFloat(totalDonation);
     myCurrentBalance = parseFloat(myCurrentBalance);
 
-    if(isNaN(donationAmount))
-    {
+    if (isNaN(donationAmount)) {
         alert('Input valid Number');
         document.getElementById('donation-amount-noakhali').value = '';
         return;
     }
-    if(donationAmount<0){
+    if (donationAmount < 0) {
         alert('Donation amount cannot be negative number');
         document.getElementById('donation-amount-noakhali').value = '';
         return;
     }
-    if(donationAmount>myCurrentBalance)
-    {
+    if (donationAmount > myCurrentBalance) {
         alert('Insuficient Balance');
         document.getElementById('donation-amount-noakhali').value = '';
         return;
@@ -34,12 +32,33 @@ document.getElementById('noakhali-donate-button').addEventListener('click', func
     document.getElementById('my-Balance').innerText = myCurrentBalance - donationAmount;
 
     document.getElementById('donation-amount-noakhali').value = '';
+
+    
+
+    let div = document.createElement('div');
+    let h2 = document.createElement('h2');
+    let p = document.createElement('p');
+
+    h2.innerText = donationAmount + " Taka Donated For Flood Relief in Noakhali, Bangladesh";
+    p.innerText = times();
+
+    div.appendChild(h2);
+    div.appendChild(p);
+
+    h2.style.fontWeight = 'bold';
+    h2.style.marginBottom ='12px';
+    div.style.border = '1px solid gray';
+    div.style.borderRadius = '16px';
+    div.style.padding = '16px';
+    div.style.marginBottom = '8px';
+    document.getElementById('donation-history').appendChild(div);
+
     alert('Donation successfull');
 })
 
 
 // feni donation section js
-document.getElementById('feni-donation-button').addEventListener('click', function(event){
+document.getElementById('feni-donation-button').addEventListener('click', function (event) {
     event.preventDefault();
     let donationAmount = getElementValueById('donation-amount-feni');
     let totalDonation = getElementInnerTextById('feni-total-donation');
@@ -49,19 +68,17 @@ document.getElementById('feni-donation-button').addEventListener('click', functi
     totalDonation = parseFloat(totalDonation);
     myCurrentBalance = parseFloat(myCurrentBalance);
 
-    if(isNaN(donationAmount))
-    {
+    if (isNaN(donationAmount)) {
         alert('Input valid Number');
         document.getElementById('donation-amount-feni').value = '';
         return;
     }
-    if(donationAmount<0){
+    if (donationAmount < 0) {
         alert('Donation amount cannot be negative number');
         document.getElementById('donation-amount-feni').value = '';
         return;
     }
-    if(donationAmount>myCurrentBalance)
-    {
+    if (donationAmount > myCurrentBalance) {
         alert('Insuficient Balance');
         document.getElementById('donation-amount-feni').value = '';
         return;
@@ -72,12 +89,33 @@ document.getElementById('feni-donation-button').addEventListener('click', functi
     document.getElementById('my-Balance').innerText = myCurrentBalance - donationAmount;
 
     document.getElementById('donation-amount-feni').value = '';
+
+
+
+    let div = document.createElement('div');
+    let h2 = document.createElement('h2');
+    let p = document.createElement('p');
+
+    h2.innerText = donationAmount + " Taka Donated For Flood Relief in Feni, Bangladesh";
+    p.innerText = times();
+
+    div.appendChild(h2);
+    div.appendChild(p);
+
+    h2.style.fontWeight = 'bold';
+    h2.style.marginBottom ='12px';
+    div.style.border = '1px solid gray';
+    div.style.borderRadius = '16px';
+    div.style.padding = '16px';
+    div.style.marginBottom = '8px';
+
+    document.getElementById('donation-history').appendChild(div);
     alert('Donation successfull');
 })
 
 
 // quota donation section js
-document.getElementById('quota-donation-button').addEventListener('click', function(event){
+document.getElementById('quota-donation-button').addEventListener('click', function (event) {
     event.preventDefault();
     let donationAmount = getElementValueById('donation-amount-quota');
     let totalDonation = getElementInnerTextById('quota-total-donation');
@@ -87,19 +125,17 @@ document.getElementById('quota-donation-button').addEventListener('click', funct
     totalDonation = parseFloat(totalDonation);
     myCurrentBalance = parseFloat(myCurrentBalance);
 
-    if(isNaN(donationAmount))
-    {
+    if (isNaN(donationAmount)) {
         alert('Input valid Number');
         document.getElementById('donation-amount-quota').value = '';
         return;
     }
-    if(donationAmount<0){
+    if (donationAmount < 0) {
         alert('Donation amount cannot be negative number');
         document.getElementById('donation-amount-quota').value = '';
         return;
     }
-    if(donationAmount>myCurrentBalance)
-    {
+    if (donationAmount > myCurrentBalance) {
         alert('Insuficient Balance');
         document.getElementById('donation-amount-quota').value = '';
         return;
@@ -110,5 +146,42 @@ document.getElementById('quota-donation-button').addEventListener('click', funct
     document.getElementById('my-Balance').innerText = myCurrentBalance - donationAmount;
 
     document.getElementById('donation-amount-quota').value = '';
+
+
+    let div = document.createElement('div');
+    let h2 = document.createElement('h2');
+    let p = document.createElement('p');
+
+    h2.innerText = donationAmount + " Taka Donated For Aid for Quota Movement, Bangladesh";
+    p.innerText = times();
+
+    div.appendChild(h2);
+    div.appendChild(p);
+
+    h2.style.fontWeight = 'bold';
+    h2.style.marginBottom ='12px';
+    div.style.border = '1px solid gray';
+    div.style.borderRadius = '16px';
+    div.style.padding = '16px';
+    div.style.marginBottom = '8px';
+
+    document.getElementById('donation-history').appendChild(div);
     alert('Donation successfull');
+})
+
+
+
+// donation button
+document.getElementById('donation').addEventListener('click', function () {
+    document.getElementById('donation-history').classList.add('hidden');
+    document.getElementById('donation-page').classList.remove('hidden');
+})
+
+
+
+// history button
+document.getElementById('history').addEventListener('click', function () {
+
+    document.getElementById('donation-page').classList.add('hidden');
+    document.getElementById('donation-history').classList.remove('hidden');
 })
