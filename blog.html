@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <!--import font cdn-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- daisiUI cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- css file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="lexend-font">
+    <header class="lg:sticky lg:top-0"></header>
+    <section class="backdrop-blur-xl">
+        <!-- nav bar start-->
+        <div class="bg-[#F9F7F3] pb-4">
+            <div
+                class="flex flex-col items-start lg:flex-row lg:items-center lg:justify-between flex-wrap bg-transparent py-6 default-width mx-auto">
+                <div class="order-2 md:order-1">
+                    <button onclick="blogToHome()"
+                        class="btn bg-lime-300 hover:bg-lime-200 px-6 text-xl font-semibold border-none my-5 lg:my-5">Home
+                    </button>
+                </div>
+                <div class="flex justify-center items-center space-x-4 order-1 md:order-2">
+                    <img src="assets/logo.png" alt="logo">
+                    <p class="text-xl font-bold text-[#111111] text-nowrap">Donate Bangladesh</p>
+                </div>
+                <div class="flex justify-center items-center space-x-4 order-2 ">
+                    <img src="assets/coin.png" alt="coin">
+                    <p class="text-xl text-[#111111B3] font-medium"><span id="my-Balance">550037934</span> BDT</p>
+                </div>
+            </div>
+        </div>
+        <!-- nav bar end -->
+    </section>
+    </header>
+    <main>
+        <div class="default-width mx-auto my-7">
+            <div class="join join-vertical">
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" checked="checked" />
+                    <div class="collapse-title text-xl font-medium">What is the document object mode (DOM)?</div>
+                    <div class="collapse-content">
+                        <p>The DOM (Document Object Model) is a programming interface for web documents, representing
+                            the
+                            page structure as a hierarchical tree of objects. It allows JavaScript to interact with and
+                            manipulate HTML or XML content dynamically.</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">How do you select an element from DOM?</div>
+                    <div class="collapse-content">
+                        <p>To select an element from the DOM, you can use methods like `document.getElementById('id')`,
+                            `document.querySelector('.class')`, or `document.querySelectorAll('tag')`. These methods
+                            return
+                            the element(s) based on the selector you provide.</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM,
+                        and
+                        why it is useful?</div>
+                    <div class="collapse-content">
+                        <p>Event delegation is a technique where a single event listener is attached to a parent element
+                            to
+                            handle events for its child elements. It improves performance and simplifies event handling,
+                            especially for dynamically added elements.</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and
+                        styles
+                        using the DOM?</div>
+                    <div class="collapse-content">
+                        <p>You can manipulate an element's attributes using `element.setAttribute('attribute', 'value')`
+                            and
+                            retrieve them with `element.getAttribute('attribute')`. To change styles, use
+                            `element.style.property = 'value'` to set individual CSS properties directly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- js -->
+    <script src="js/commonFunction.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+
+</html>

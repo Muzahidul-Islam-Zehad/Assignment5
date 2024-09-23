@@ -1,3 +1,8 @@
+// blog button
+function homeToBlog(){
+    window.location.assign('blog.html');
+}
+
 
 
 // NOAKHALI DONATION SECTION JS
