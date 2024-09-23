@@ -21,20 +21,20 @@
 </head>
 
 <body class="lexend-font">
-    <header class="sticky top-0">
+    <header class="lg:sticky lg:top-0">
         <section class="backdrop-blur-xl">
             <!-- nav bar start-->
-            <div class="bg-[#F9F7F3] pb-7">
-                <div class="navbar bg-transparent py-6 default-width mx-auto">
-                    <div class="navbar-start">
-                        <button class="btn bg-lime-300 hover:bg-lime-200 px-6 text-xl font-semibold border-none">Blog
+            <div class="bg-[#F9F7F3] pb-4">
+                <div class="flex flex-col items-start lg:flex-row lg:items-center lg:justify-between flex-wrap bg-transparent py-6 default-width mx-auto">
+                    <div class="order-2 md:order-1">
+                        <button class="btn bg-lime-300 hover:bg-lime-200 px-6 text-xl font-semibold border-none my-5 lg:my-5">Blog
                         </button>
                     </div>
-                    <div class="navbar-center space-x-4">
+                    <div class="flex justify-center items-center space-x-4 order-1 md:order-2">
                         <img src="assets/logo.png" alt="logo">
-                        <p class="text-xl font-bold text-[#111111]">Donate Bangladesh</p>
+                        <p class="text-xl font-bold text-[#111111] text-nowrap">Donate Bangladesh</p>
                     </div>
-                    <div class="navbar-end space-x-4">
+                    <div class="flex justify-center items-center space-x-4 order-2 ">
                         <img src="assets/coin.png" alt="coin">
                         <p class="text-xl text-[#111111B3] font-medium"><span id="my-Balance">5500</span> BDT</p>
                     </div>
@@ -42,7 +42,8 @@
             </div>
             <!-- nav bar end -->
 
-            <div class="flex justify-center gap-4 py-6">
+            <!-- donation and history button -->
+            <div class="flex justify-center gap-4 py-6 default-width mx-auto">
                 <button class="btn bg-lime-300 hover:bg-lime-200 px-8 text-xl font-semibold border-none">Donation
                 </button>
                 <button
@@ -57,7 +58,7 @@
             <div class="default-width mx-auto">
                 <!-- card 1 -->
                 <div class="border border-gray-200 rounded-2xl p-8">
-                    <div class="grid grid-cols-2">
+                    <div class="grid grid-cols-1 lg:grid-cols-2">
                         <div >
                             <img class="w-auto" src="assets/noakhali.png" alt="noakhali flood">
                         </div>
@@ -88,7 +89,7 @@
                 </div>
                 <!-- card 2 -->
                  <div class="border border-gray-200 rounded-2xl p-8 mb-8">
-                    <div class="grid grid-cols-2">
+                    <div class="grid grid-cols-1 lg:grid-cols-2">
                         <div>
                             <img class="" src="assets/feni.png" alt="noakhali flood">
                         </div>
@@ -114,7 +115,7 @@
                 </div>
                 <!-- card 3 -->
                  <div class="border border-gray-200 rounded-2xl p-8 mb-8">
-                    <div class="grid grid-cols-2">
+                    <div class="grid grid-cols-1 lg:grid-cols-2">
                         <div>
                             <img class="" src="assets/quota-protest.png" alt="noakhali flood">
                         </div>
@@ -138,9 +139,11 @@
     
                     </div>
                 </div>
-    
             </div>
-            
+        </section>
+
+        <section>
+
         </section>
     </main>
 
@@ -148,6 +151,7 @@
 
     </footer>
 
+    <!-- js -->
     <script src="js/commonFunction.js"></script>
     <script src="js/home.js"></script>
 </body>
