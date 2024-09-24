@@ -10,6 +10,7 @@ function getElementInnerTextById(id){
 
 
 function times(){
+    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
     let today = new Date();
     let year = today.getUTCFullYear();
     let month = today.getMonth() + 1;
@@ -21,9 +22,14 @@ function times(){
     if(hours>12)
     {
         hours = hours - 12;
-        format = 'PM'
+        format = 'PM';
     }
-    const times = 'Date: '+ date +'/'+month+'/'+year +'  Time: '+hours+':'+minutes+':'+seconds +' '+ format;
+    if(hours === 0)
+    {
+        hours = 12;
+        format = 'AM';
+    }
+    const times = 'Date: '+ date +'/'+month+'/'+year +'   Time: '+hours+':'+minutes+':'+seconds +' '+ format + '   Time Zone: '+timeZone;
     return times;
 }
 
