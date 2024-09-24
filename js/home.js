@@ -14,15 +14,16 @@ document.getElementById('noakhali-donate-button').addEventListener('click', func
     let totalDonation = getElementInnerTextById('noakhali-total-donation');
     let myCurrentBalance = getElementInnerTextById('my-Balance');
 
-    donationAmount = parseFloat(donationAmount);
-    totalDonation = parseFloat(totalDonation);
-    myCurrentBalance = parseFloat(myCurrentBalance);
-
-    if (isNaN(donationAmount)) {
+    if (isNaN(donationAmount) === true) {
         alert('Invalid Amount');
         document.getElementById('donation-amount-noakhali').value = '';
         return;
     }
+
+    donationAmount = parseFloat(donationAmount);
+    totalDonation = parseFloat(totalDonation);
+    myCurrentBalance = parseFloat(myCurrentBalance);
+
     if (donationAmount < 0) {
         alert('Invalid Amount');
         document.getElementById('donation-amount-noakhali').value = '';
@@ -72,15 +73,18 @@ document.getElementById('feni-donation-button').addEventListener('click', functi
     let totalDonation = getElementInnerTextById('feni-total-donation');
     let myCurrentBalance = getElementInnerTextById('my-Balance');
 
-    donationAmount = parseFloat(donationAmount);
-    totalDonation = parseFloat(totalDonation);
-    myCurrentBalance = parseFloat(myCurrentBalance);
 
     if (isNaN(donationAmount)) {
         alert('Invalid Amount');
         document.getElementById('donation-amount-feni').value = '';
         return;
     }
+
+    donationAmount = parseFloat(donationAmount);
+    totalDonation = parseFloat(totalDonation);
+    myCurrentBalance = parseFloat(myCurrentBalance);
+
+    
     if (donationAmount < 0) {
         alert('Invalid Amount');
         document.getElementById('donation-amount-feni').value = '';
@@ -95,7 +99,6 @@ document.getElementById('feni-donation-button').addEventListener('click', functi
     document.getElementById('feni-total-donation').innerText = donationAmount + totalDonation;
 
     document.getElementById('my-Balance').innerText = myCurrentBalance - donationAmount;
-    // document.getElementById('my-blog-Balance').innerText = myCurrentBalance - donationAmount;
 
     document.getElementById('donation-amount-feni').value = '';
 
@@ -132,15 +135,16 @@ document.getElementById('quota-donation-button').addEventListener('click', funct
     let totalDonation = getElementInnerTextById('quota-total-donation');
     let myCurrentBalance = getElementInnerTextById('my-Balance');
 
-    donationAmount = parseFloat(donationAmount);
-    totalDonation = parseFloat(totalDonation);
-    myCurrentBalance = parseFloat(myCurrentBalance);
-
     if (isNaN(donationAmount)) {
         alert('Invalid Amount');
         document.getElementById('donation-amount-quota').value = '';
         return;
     }
+
+    donationAmount = parseFloat(donationAmount);
+    totalDonation = parseFloat(totalDonation);
+    myCurrentBalance = parseFloat(myCurrentBalance);
+
     if (donationAmount < 0) {
         alert('Invalid Amount');
         document.getElementById('donation-amount-quota').value = '';
@@ -155,7 +159,6 @@ document.getElementById('quota-donation-button').addEventListener('click', funct
     document.getElementById('quota-total-donation').innerText = donationAmount + totalDonation;
 
     document.getElementById('my-Balance').innerText = myCurrentBalance - donationAmount;
-    // document.getElementById('my-blog-Balance').innerText = myCurrentBalance - donationAmount;
 
     document.getElementById('donation-amount-quota').value = '';
 
