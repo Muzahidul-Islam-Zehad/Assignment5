@@ -1,6 +1,8 @@
 // blog button
 function homeToBlog(){
+
     window.location.assign('blog.html');
+    document.getElementById('my-blog-Balance').innerText = getElementInnerTextById('my-Balance');
 }
 
 
@@ -93,6 +95,7 @@ document.getElementById('feni-donation-button').addEventListener('click', functi
     document.getElementById('feni-total-donation').innerText = donationAmount + totalDonation;
 
     document.getElementById('my-Balance').innerText = myCurrentBalance - donationAmount;
+    // document.getElementById('my-blog-Balance').innerText = myCurrentBalance - donationAmount;
 
     document.getElementById('donation-amount-feni').value = '';
 
@@ -116,7 +119,7 @@ document.getElementById('feni-donation-button').addEventListener('click', functi
     div.style.marginBottom = '8px';
 
     document.getElementById('donation-history').appendChild(div);
-    
+
     //show modal
     document.getElementById('my_modal').showModal();
 })
@@ -152,6 +155,7 @@ document.getElementById('quota-donation-button').addEventListener('click', funct
     document.getElementById('quota-total-donation').innerText = donationAmount + totalDonation;
 
     document.getElementById('my-Balance').innerText = myCurrentBalance - donationAmount;
+    // document.getElementById('my-blog-Balance').innerText = myCurrentBalance - donationAmount;
 
     document.getElementById('donation-amount-quota').value = '';
 
