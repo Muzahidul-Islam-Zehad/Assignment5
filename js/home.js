@@ -17,12 +17,12 @@ document.getElementById('noakhali-donate-button').addEventListener('click', func
     myCurrentBalance = parseFloat(myCurrentBalance);
 
     if (isNaN(donationAmount)) {
-        alert('Input valid Number');
+        alert('Invalid Amount');
         document.getElementById('donation-amount-noakhali').value = '';
         return;
     }
     if (donationAmount < 0) {
-        alert('Donation amount cannot be negative number');
+        alert('Invalid Amount');
         document.getElementById('donation-amount-noakhali').value = '';
         return;
     }
@@ -74,12 +74,12 @@ document.getElementById('feni-donation-button').addEventListener('click', functi
     myCurrentBalance = parseFloat(myCurrentBalance);
 
     if (isNaN(donationAmount)) {
-        alert('Input valid Number');
+        alert('Invalid Amount');
         document.getElementById('donation-amount-feni').value = '';
         return;
     }
     if (donationAmount < 0) {
-        alert('Donation amount cannot be negative number');
+        alert('Invalid Amount');
         document.getElementById('donation-amount-feni').value = '';
         return;
     }
@@ -131,12 +131,12 @@ document.getElementById('quota-donation-button').addEventListener('click', funct
     myCurrentBalance = parseFloat(myCurrentBalance);
 
     if (isNaN(donationAmount)) {
-        alert('Input valid Number');
+        alert('Invalid Amount');
         document.getElementById('donation-amount-quota').value = '';
         return;
     }
     if (donationAmount < 0) {
-        alert('Donation amount cannot be negative number');
+        alert('Invalid Amount');
         document.getElementById('donation-amount-quota').value = '';
         return;
     }
