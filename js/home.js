@@ -48,7 +48,7 @@ document.getElementById('noakhali-donate-button').addEventListener('click', func
     let p = document.createElement('p');
 
     h2.innerText = donationAmount + " Taka Donated For Flood Relief in Noakhali, Bangladesh";
-    p.innerText = times();
+    p.innerText =`Date : ${new Date().toString()}`;
 
     div.appendChild(h2);
     div.appendChild(p);
@@ -109,7 +109,7 @@ document.getElementById('feni-donation-button').addEventListener('click', functi
     let p = document.createElement('p');
 
     h2.innerText = donationAmount + " Taka Donated For Flood Relief in Feni, Bangladesh";
-    p.innerText = times();
+    p.innerText =`Date : ${new Date().toString()}`;
 
     div.appendChild(h2);
     div.appendChild(p);
@@ -168,7 +168,7 @@ document.getElementById('quota-donation-button').addEventListener('click', funct
     let p = document.createElement('p');
 
     h2.innerText = donationAmount + " Taka Donated For Aid for Quota Movement, Bangladesh";
-    p.innerText = times();
+    p.innerText =`Date : ${new Date().toString()}`;
 
     div.appendChild(h2);
     div.appendChild(p);
